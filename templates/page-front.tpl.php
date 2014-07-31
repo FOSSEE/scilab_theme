@@ -276,7 +276,11 @@
 							Click here to view stats
 						</a>
 						</div><br>
-                        <div ><img src="http://fossee.in/sites/all/themes/fossee/logo.png" style="width:150px;"/> </div>
+                        <div>
+                            <a href="http://fossee.in" target="_blank">
+                                <img src="http://fossee.in/sites/all/themes/fossee/logo.png" style="width:150px;"/>
+                            </a>
+                        </div>
 						</center>
 					</div>
 
