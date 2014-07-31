@@ -123,12 +123,15 @@
 	<script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/menu.js"></script>
 	<script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/slideshow.js"></script>
 	<script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/testimonials_script.js"></script>
+	<script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/lightbox_me.js"></script>
+	<script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/modal.js"></script>
 	<script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/nice-bar.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/css/modal.css" />
 	<link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/css/dropdown-menu.css" />
 	<link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/css/nice-bar.css" />
 	<link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/css/testimonials_front.css" />
-        <link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/orbit/orbit-1.2.3.css">
-        <style type="text/css">
+    <link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/orbit/orbit-1.2.3.css">
+    <style type="text/css">
 	#slideshow img
 	{
 		display:none;
@@ -356,23 +359,52 @@
                                
                                         </div>
                                         </div>
-                            <div id="testimonials_front">
-                            <ul>
-                            <?php 
-                            $query = "SELECT * FROM testimonials ORDER BY id ASC LIMIT 10";
-                            $result = db_query($query);
-                            while ($row = db_fetch_object($result)) 
-                            {                                                	
-                                echo "<li><h4><i>Testimonials</i></h4><i><p style='text-align:left;margin-top:2px'>{$row->body}</p>
-                                <br/><p style='text-align:right;margin-top:-30px'>{$row->name},</p> 
-                                <p style='text-align:right;margin-top:-15px'>{$row->department},
-                                {$row->university},</p>
-                                <p style='text-align:right;margin-top:-15px''>{$row->contribution},{$row->reference}</p></i>
-                                </li>";                                                	
-                            }
-                            ?>
-                            </ul>
-                            </div>
+                                        <div id="testimonials_front">
+                                            <div style='mar:-50px' id='panel'>
+                                                <?php
+                                                    echo "<a href='testimonials-page-1' title='View all Testimonials' class='testimonial_head'>Testimonials</a>";
+                                                    ?>
+                                            </div>
+                                            <ul>
+                                                <?php 
+
+                                                $query = "SELECT * FROM testimonials";
+
+                                                $result = db_query($query);
+                                                $id=$row->id;
+                                                while ($row = db_fetch_object($result)) 
+                                                {      
+                                                $string =  strip_tags($row->body);
+                                                $length=strlen($string);
+                                                if($length>300)
+                                                {
+                                                $cut1= drupal_substr($string, 0, 300);
+                                                $cut=$cut1."...";
+                                                }
+                                                else {
+                                                $cut= drupal_substr($string, 0, 300);
+                                                }
+                                                echo "<li><i><p style='margin-top:16px'>{$cut}</i> <a  href='' id='$row->id'  data-target='#dialog{$row->id}' class='testimonial_read_more'>Read more..</a></p>
+                                                <div id='dialog{$row->id}' class='dialog'>                                                		
+                                                    <img src='sites/all/themes/scilab/images/x.png'  style='margin-top:-25px ;margin-left:704px;' class='lightbox_close'>
+                                                    <i><p style='margin-top:-1px'>{$row->body}</i><hr/><br/>
+                                                    <p style='text-align:right;margin-top:-15px'>{$row->name},</p> 
+                                                    <p style='text-align:right;margin-top:-15px'>{$row->department},
+                                                    {$row->university},</p>
+                                                    <p style='text-align:right;margin-top:-15px''>{$row->contribution},{$row->reference}.</p>
+                                                </div>
+                                                <br/>
+
+                                                <p style='text-align:right;margin-top:-30px'>{$row->name},{$row->university},
+                                                {$row->contribution},</p>
+                                                <p style='text-align:right;margin-top:-15px''>{$row->reference}.</p>	
+                                                </li>"; 	
+
+                                                }
+                                                ?>
+                                            </ul>
+                                        </div> <!-- /#testimonials_front -->
+
                                </div>		<!-- /.section, /#content -->
     <?php endif; ?>
                                     </div>
