@@ -1,0 +1,50 @@
+
+.testimonial{
+  position: relative;
+  text-align: justify;
+  margin: 25px 0 0 0;
+  padding: 0 0 10px 0;
+  background: #e5e5e5;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.testimonial > .author{
+  text-align: right;
+  font-weight: bolder;
+  margin: 15px 0 0 0;
+  background: #ffffff;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.page-nav{
+  position: relative;
+  padding: 25px 0;
+}
+.page-next{
+  position: absolute;
+  right: 0;
+  top: 25px;
+}
+.page-prev{
+  position: absolute;
+  left: 0;
+  top: 25px;
+}
+.page-nos{
+  position: relative;
+  left: 275px;
+  top: -47px;
+}
+.page-nos1{
+  position: relative;
+  left: 275px;
+  top: -47px;
+  color: #424242;
+  font-weight: 900;
+}

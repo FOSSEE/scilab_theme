@@ -1,0 +1,31 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+
+#testimonials_front{
+	padding: 20px 20px 15px 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+	background:url('../images/open-quote.png') no-repeat ;
+	min-height:90px;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	box-shadow: 1px 1px 4px 1px #888888;
+	height:135px;
+	overflow:auto;
+}
+
+#testimonials_front li{ display:none;}
+#testimonials_front li:first-child{ display:block;}
+
+#testimonials_front ul{ list-style:none;}
+
+
+#testimonials_front h4{
+color:#424242;
+margin-top:-20px;
+	
+}
