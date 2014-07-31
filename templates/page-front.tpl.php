@@ -275,8 +275,8 @@
 						<a href="http://www.scilab.in/awstats/awstats.pl?config=scilab" target="_blank">
 							Click here to view stats
 						</a>
-						</div>
-
+						</div><br>
+                        <div ><img src="http://fossee.in/sites/all/themes/fossee/logo.png" style="width:150px;"/> </div>
 						</center>
 					</div>
 
