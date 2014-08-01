@@ -388,7 +388,7 @@
                                                 else {
                                                 $cut= drupal_substr($string, 0, 300);
                                                 }
-                                                echo "<li><i><p style='margin-top:16px'>{$cut}</i> <a  href='' id='$row->id'  data-target='#dialog{$row->id}' class='testimonial_read_more'>Read more..</a></p>
+                                                echo "<li><i><p style='margin-top:16px'>{$cut}</i></p><a href='' id='$row->id'  data-target='#dialog{$row->id}' class='testimonial_read_more'>Read more..</a>
                                                 <div id='dialog{$row->id}' class='dialog'>                                                		
                                                     <img src='sites/all/themes/scilab/images/x.png'  style='margin-top:-25px ;margin-left:704px;' class='lightbox_close'>
                                                     <i><p style='margin-top:-1px'>{$row->body}</i><hr/><br/>
