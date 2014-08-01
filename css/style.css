@@ -57,8 +57,13 @@ ol li,ul li{
 
 a{
     font-size: 13px;
-    color: #800000;
+    color: #0072b9;
     text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration:underline;
 }
 
 table{
@@ -184,7 +189,6 @@ height:110px;
 #sidebarfstsub li a{
 	text-decoration:none;
 	color:#FFFFFF;
-	font-size: 12px;
 }
 .content
 {
@@ -716,8 +720,3 @@ h1#frnt.title
 {
 	display:none;
 }
-.statistics_counter {
-	display: none !important;
-}
-
-
