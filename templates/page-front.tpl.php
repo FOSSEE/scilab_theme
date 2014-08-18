@@ -15,8 +15,8 @@
  * - $logged_in: TRUE if the user is registered and signed in.
  * - $is_admin: TRUE if the user has permission to access administration pages.
  *
- * Page metadata:
  * - $language: (object) The language the site is being displayed in.
+ * Page metadata:
  *   $language->language contains its textual representation.
  *   $language->dir contains the language direction. It will either be 'ltr' or 'rtl'.
  * - $head_title: A modified version of the page title, for use in the TITLE tag.
@@ -132,6 +132,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/css/testimonials_front.css" />
     <link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/orbit/orbit-1.2.3.css">
     <style type="text/css">
+
+	
 	#slideshow img
 	{
 		display:none;
@@ -152,6 +154,10 @@
 		     -o-border-bottom-left-radius: 5px;
 		        border-bottom-left-radius: 5px;
 	}	
+
+	.statistics_counter{
+	display :none !important;
+	}
 	</style>
 	
     </head>
@@ -366,7 +372,7 @@
                                         <div id="testimonials_front">
                                             <div style='mar:-50px' id='panel'>
                                                 <?php
-                                                    echo "<a href='testimonials-page-1' title='View all Testimonials' class='testimonial_head'>Testimonials</a>";
+                                                    echo "<a href='/testimonials' title='View all Testimonials' class='testimonial_head'>Testimonials</a>";
                                                     ?>
                                             </div>
                                             <ul>
@@ -380,15 +386,15 @@
                                                 {      
                                                 $string =  strip_tags($row->body);
                                                 $length=strlen($string);
-                                                if($length>300)
+                                                if($length>260)
                                                 {
-                                                $cut1= drupal_substr($string, 0, 300);
+                                                $cut1= drupal_substr($string, 0, 260);
                                                 $cut=$cut1."...";
                                                 }
                                                 else {
-                                                $cut= drupal_substr($string, 0, 300);
+                                                $cut= drupal_substr($string, 0, 260);
                                                 }
-                                                echo "<li><i><p style='margin-top:16px'>{$cut}</i></p><a href='' id='$row->id'  data-target='#dialog{$row->id}' class='testimonial_read_more'>Read more..</a>
+                                                echo "<li><i><p style='margin-top:-7px'>{$cut}</i></p><a href='' id='$row->id'  data-target='#dialog{$row->id}' class='testimonial_read_more'>Read more..</a>
                                                 <div id='dialog{$row->id}' class='dialog'>                                                		
                                                     <img src='sites/all/themes/scilab/images/x.png'  style='margin-top:-25px ;margin-left:704px;' class='lightbox_close'>
                                                     <i><p style='margin-top:-1px'>{$row->body}</i><hr/><br/>
