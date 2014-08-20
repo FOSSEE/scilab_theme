@@ -342,7 +342,7 @@
 						?>-->
 						<?php $node = node_load(678);
 						print $node->teaser; ?>
-						<a href="overview" class="read_more">Read more..</a>
+						<a href="overview" class="read_more">Read more</a>
 						</div>
 						<div id="teaser_block_right"><h2>Features</h2>
 						<!--<?php 
@@ -354,8 +354,8 @@
 						?>-->
 						<?php $node = node_load(47);
 						print $node->teaser; ?>
-						<!-- <a href="scilabfeatures" class="read_more"style="position: relative; top: 20px;">Read more..</a> -->
-						<a href="scilabfeatures" class="read_more"style="position: relative;">Read more..</a>
+						<!-- <a href="scilabfeatures" class="read_more"style="position: relative; top: 20px;">Read more</a> -->
+						<a href="scilabfeatures" class="read_more"style="position: relative;">Read more</a>
 						</div>
 					    </div>
                                             <?php print $content; ?>
@@ -394,9 +394,9 @@
                                                 else {
                                                 $cut= drupal_substr($string, 0, 260);
                                                 }
-                                                echo "<li><i><p style='margin-top:-7px'>{$cut}</i></p><a href='' id='$row->id'  data-target='#dialog{$row->id}' class='testimonial_read_more'>Read more..</a>
+                                                echo "<li><i><p style='margin-top:-7px'>{$cut}</i><a href='' id='$row->id'  data-target='#dialog{$row->id}' class='testimonial_read_more'>Read more</a></p>
                                                 <div id='dialog{$row->id}' class='dialog'>                                                		
-                                                    <img src='sites/all/themes/scilab/images/x.png'  style='margin-top:-25px ;margin-left:704px;' class='lightbox_close'>
+                                                    <img src='sites/all/themes/scilab/images/x.png'  style='margin-top:-25px ;margin-left:735px;' class='lightbox_close'>
                                                     <i><p style='margin-top:-1px'>{$row->body}</i><hr/><br/>
                                                     <p style='text-align:right;margin-top:-15px'>{$row->name},</p> 
                                                     <p style='text-align:right;margin-top:-15px'>{$row->department},
