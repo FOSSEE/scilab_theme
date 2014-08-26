@@ -389,12 +389,8 @@
                                                 if($length>260)
                                                 {
                                                 $cut1= drupal_substr($string, 0, 260);
-                                                $cut=$cut1."...";
-                                                }
-                                                else {
-                                                $cut= drupal_substr($string, 0, 260);
-                                                }
-                                                echo "<li><i><p style='margin-top:-7px'>{$cut}</i><a href='' id='$row->id'  data-target='#dialog{$row->id}' class='testimonial_read_more'>Read more</a></p>
+                                                $cut=$cut1."  ...   ";
+                                                 echo "<li><i><p style='margin-top:-7px'>{$cut}</i><a href='' id='$row->id' style='margin-left:5px'  data-target='#dialog{$row->id}' class='testimonial_read_more'>Read more</a></p>
                                                 <div id='dialog{$row->id}' class='dialog'>                                                		
                                                     <img src='sites/all/themes/scilab/images/x.png'  style='margin-top:-25px ;margin-left:735px;' class='lightbox_close'>
                                                     <i><p style='margin-top:-1px'>{$row->body}</i><hr/><br/>
@@ -411,6 +407,28 @@
                                                 </li>"; 	
 
                                                 }
+                                                
+                                                else {
+                                                $cut= drupal_substr($string, 0, 260);
+                                                 echo "<li><i><p style='margin-top:-7px'>{$cut}</i>
+                                                <div id='dialog{$row->id}' class='dialog'>                                                		
+                                                    <img src='sites/all/themes/scilab/images/x.png'  style='margin-top:-25px ;margin-left:735px;' class='lightbox_close'>
+                                                    <i><p style='margin-top:-1px'>{$row->body}</i><hr/><br/>
+                                                    <p style='text-align:right;margin-top:-15px'>{$row->name},</p> 
+                                                    <p style='text-align:right;margin-top:-15px'>{$row->department},
+                                                    {$row->university},</p>
+                                                    <p style='text-align:right;margin-top:-15px''>{$row->contribution},{$row->reference}.</p>
+                                                </div>
+                                                <br/>
+
+                                                <p style='text-align:right;margin-top:-30px'>{$row->name},{$row->university},
+                                                {$row->contribution},</p>
+                                                <p style='text-align:right;margin-top:-15px''>{$row->reference}.</p>	
+                                                </li>"; 	
+
+                                                }
+                                                }
+                                               
                                                 ?>
                                             </ul>
                                         </div> <!-- /#testimonials_front -->

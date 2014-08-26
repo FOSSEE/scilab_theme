@@ -5,7 +5,7 @@ $(document).ready(function(){
 	
 	(function showNextTestimonial(){
 		
-		$('#testimonials_front li:visible').delay(8000).fadeOut('slow',function(){
+		$('#testimonials_front li:visible').delay(12000).fadeOut('slow',function(){
 			$(this).appendTo('#testimonials_front ul');
 			if($(this).next().length > 0)
 				{
