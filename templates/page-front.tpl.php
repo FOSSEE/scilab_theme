@@ -162,13 +162,13 @@
 	
     </head>
     <body class="<?php print $classes; ?>">
-    <div class="nice-bar">
-        <p class="nice-text">
-            Developers required for <em>NMEICT/MHRD</em> funded FOSSEE project.
-            <a class="nice-button" href="http://fossee.in/jobs">View more</a> details.
-            <span class="nice-close">x</span>
-        </p>
-    </div>
+    <!-- <div class="nice&#45;bar"> -->
+    <!--     <p class="nice&#45;text"> -->
+    <!--         Developers required for <em>NMEICT/MHRD</em> funded FOSSEE project. -->
+    <!--         <a class="nice&#45;button" href="http://fossee.in/jobs">View more</a> details. -->
+    <!--         <span class="nice&#45;close">x</span> -->
+    <!--     </p> -->
+    <!-- </div> -->
         <?php if ($primary_links): ?>
             <div id="skip-link"><a href="#main-menu"><?php // print t('Jump to Navigation');   ?></a></div>
         <?php endif; ?>
