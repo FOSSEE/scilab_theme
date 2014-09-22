@@ -115,9 +115,10 @@
         <?php print $head; ?>
         <?php print $styles; ?>
         <?php print $scripts; ?>
+    <script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/jquery.min.js"></script>
 	<script src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/orbit/jquery-1.5.1.min.js"></script>
-        <script src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/orbit/jquery.orbit-1.2.3.js"></script>
-        <script src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/orbit/jquery.orbit-1.2.3.min.js"></script>
+    <script src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/orbit/jquery.orbit-1.2.3.js"></script>
+    <script src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/orbit/jquery.orbit-1.2.3.min.js"></script>
 	<script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/dropdown-menu.min.js"></script>
 	<script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/menu.js"></script>
@@ -126,9 +127,11 @@
 	<script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/lightbox_me.js"></script>
 	<script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/modal.js"></script>
 	<script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/nice-bar.js"></script>
+    <script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/feedback-bar.js"></script> 
 	<link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/css/modal.css" />
 	<link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/css/dropdown-menu.css" />
 	<link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/css/nice-bar.css" />
+    <link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/css/feedback_popup.css" />
 	<link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/css/testimonials_front.css" />
     <link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/orbit/orbit-1.2.3.css">
     <style type="text/css">
@@ -169,6 +172,22 @@
     <!--         <span class="nice&#45;close">x</span> -->
     <!--     </p> -->
     <!-- </div> -->
+         <div id="cookie_box">
+             <div class="popup_box">
+                <div class="header">Important Message
+                        <div class="closee_btn">&nbsp;
+                        </div>
+                         <span class="min_max min_btn">&nbsp;</span>
+                </div>
+                <div class="toggle_box">
+                    <div class="message_box">
+                        Your feedback is important for us. 
+                        Please fill the feedback form. click 
+                      <a class="nice&#45;button" href="http://fossee.in/feedback/scilab-aicte" target="_blank">here</a>
+                    </div>
+                </div>
+            </div>
+         </div>
         <?php if ($primary_links): ?>
             <div id="skip-link"><a href="#main-menu"><?php // print t('Jump to Navigation');   ?></a></div>
         <?php endif; ?>

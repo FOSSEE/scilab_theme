@@ -111,6 +111,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
 
     <head>
+        <script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/js/feedback-bar.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?php print $GLOBALS['base_url']; ?>/sites/all/themes/scilab/css/feedback_popup.css" />
         <title><?php print $head_title; ?></title>
         <?php print $head; ?>
         <?php print $styles; ?>
@@ -125,6 +128,23 @@
 	
 </script>
     <body class="<?php print $classes; ?>">
+        <div id="cookie_box">
+             <div class="popup_box">
+                <div class="header">Important Message
+                        <div class="closee_btn">&nbsp;
+                        </div>
+                         <span class="min_max min_btn">&nbsp;</span>
+                </div>
+                <div class="toggle_box">
+                    <div class="message_box">
+                        Your feedback is important for us. 
+                        Please fill the feedback form. click 
+                      <a class="nice&#45;button" href="http://fossee.in/feedback/scilab-aicte" target="_blank">here</a>
+                    </div>
+                </div>
+            </div>
+         </div>
+
 
         <?php if ($primary_links): ?>
             <div id="skip-link"><a href="#main-menu"><?php // print t('Jump to Navigation');   ?></a></div>

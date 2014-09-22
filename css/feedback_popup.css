@@ -1,0 +1,68 @@
+
+.popup_box {
+	background: #522900;
+	width: 250px;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index:9;
+}
+.popup_box .header .min_btn {
+	background: url(../images/arrow.png) no-repeat 0px -9px;
+	
+	float: right;
+	width: 15px;
+	height: 15px;
+}
+.popup_box .header .max_btn {
+	background: url(../images/arrow.png) no-repeat 0px 3px;
+	
+	float: right;
+	width: 15px;
+	height: 15px;
+}
+.popup_box .header .min_max .min_btn  {
+	background: url(../images/arrow.png) no-repeat 0px -9px;
+	float: right;
+	width: 15px;
+	height: 15px;
+}
+.popup_box .header .closee_btn {
+	background: url(../images/close_btn.png) no-repeat 0px 0px;
+	float: right;
+	width: 15px;
+	height: 15px;
+}
+.popup_box .header .closee_btn:hover {
+	background: url(../images/close_btn.png) no-repeat 0px -16px;
+}
+.popup_box .header{
+	padding: 5px 3px 5px 5px;
+	font: 11px 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-weight: bold;
+	color:#fff;	
+	border-bottom:none;
+	cursor: pointer;
+}
+.popup_box .header:hover{
+	background-color: #ea9c4d;
+}
+.popup_box .message_box {
+	background: #9c6833;
+	height: 60px;
+	overflow:hidden;
+	text-align: center;
+	font: 11px 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-weight: bold;
+	color:#fff;
+	padding-top: 10px;
+}
+#cookie_box
+{ 
+    position: fixed;
+    display: none;
+    bottom: 0px;
+    z-index: 2000;
+    
+}
