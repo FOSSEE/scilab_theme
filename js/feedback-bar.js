@@ -31,13 +31,13 @@ $(document).ready(function() {
         setCookie('show_cookie_message','no');
         return false;
     });
-});
- 
-function setCookie(cookie_name, value)
-{
-    document.cookie = cookie_name+ "=" + escape(value);
+});    
+function setCookie(cookie_name, value) {
+ var today = new Date();
+ var expire = new Date();
+ expire.setTime(today.getTime() + ( 2 * 60 * 60 * 1000));
+ document.cookie = cookie_name+"="+escape(value) + ";expires="+expire.toGMTString();
 }
- 
 function getCookie(cookie_name)
 {
     if (document.cookie.length>0)
